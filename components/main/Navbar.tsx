@@ -17,7 +17,10 @@ const Navbar = () => {
     <nav className="sticky top-0 bg-[#F9F6EB] w-full z-50 font-sans">
       <div className="container max-w-6xl mx-auto flex items-center justify-between h-20 p-4">
         <div>
-          <Image src="/amlogo.png" width={100} height={100} alt="logo" />
+          <Link href="/">
+            <Image src="/amlogo.png" width={100} height={100} alt="logo" />
+          </Link>
+
           {/* <div className="flex flex-col">
           <h1 className="text-[10px]">Prof. dr hab.</h1>
           <h1 className="text-xl font-semibold">Alina</h1>
@@ -25,19 +28,24 @@ const Navbar = () => {
         </div> */}
         </div>
         <div>
-          <ul className="hidden md:flex space-x-4 items-center uppercase text-[14px] font-light">
+          <ul className="hidden md:flex space-x-4 items-center uppercase tracking-wider text-[14px] font-light">
             <li>
               <Link href="/" className="hover:border-b-2 border-black">
                 specjalizacje naukowe
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:border-b-2 border-black">
+              <Link href="/projekty" className="hover:border-b-2 border-black">
                 projekty badawcze
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:border-b-2 border-black">
+              <Link href="/wdrozenia" className="hover:border-b-2 border-black">
+                wdrożenia
+              </Link>
+            </li>
+            <li>
+              <Link href="/o-mnie" className="hover:border-b-2 border-black">
                 o mnie
               </Link>
             </li>
@@ -72,12 +80,26 @@ const Navbar = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/" className="hover:border-b-2 border-black">
+                      <Link
+                        href="/projekty"
+                        className="hover:border-b-2 border-black"
+                      >
                         projekty badawcze
                       </Link>
                     </li>
                     <li>
-                      <Link href="/" className="hover:border-b-2 border-black">
+                      <Link
+                        href="/wdrozenia"
+                        className="hover:border-b-2 border-black"
+                      >
+                        wdrożenia
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/o-mnie"
+                        className="hover:border-b-2 border-black"
+                      >
                         o mnie
                       </Link>
                     </li>

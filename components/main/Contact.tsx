@@ -4,7 +4,7 @@ import { MoveRight } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section className="container max-w-6xl mx-auto mt-28 mb-28">
+    <section id="kontakt" className="container max-w-6xl mx-auto mt-28 mb-28">
       <div className="flex flex-col gap-y-8 md:flex-row justify-around">
         {/* LEFT */}
         <div className="flex-[50%]">

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Specializations = () => {
   return (
-    <section className="md:container">
+    <section id="specjalizacje" className="md:container">
       <div>
         <h1 className="font-libre text-center text-3xl font-semibold mb-32">
           Główne specjalizacje naukowe

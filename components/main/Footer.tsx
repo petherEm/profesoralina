@@ -23,11 +23,21 @@ const Footer = () => {
           <div className="flex justify-between items-start space-x-4 md:space-x-44">
             <div className="flex-1">
               <ul className="uppercase flex flex-col gap-4 text-[11px] font-sans tracking-wide">
-                <li>Specjalizacje naukowe</li>
-                <li>Projekty badawcze</li>
-                <li>Wdrozenia</li>
-                <li>O mnie</li>
-                <li>Kontakt</li>
+                <li>
+                  <Link href="/#specjalizacje">Specjalizacje naukowe</Link>
+                </li>
+                <li>
+                  <Link href="/projekty">Projekty badawcze</Link>
+                </li>
+                <li>
+                  <Link href="/wdrozenia">Wdrozenia</Link>
+                </li>
+                <li>
+                  <Link href="/o-mnie">O mnie</Link>
+                </li>
+                <li>
+                  <Link href="/#kontakt">Kontakt</Link>
+                </li>
               </ul>
             </div>
 

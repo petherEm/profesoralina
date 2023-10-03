@@ -36,7 +36,7 @@ const Navbar = () => {
           <ul className="hidden md:flex space-x-4 items-center uppercase tracking-wider text-[16px] font-light">
             <li>
               <Link
-                href="/specjalizacje"
+                href="/#specjalizacje"
                 className={`${
                   pathname.includes("/specjalizacje")
                     ? "border-b-2 border-black"
@@ -82,7 +82,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                href="/kontakt"
+                href="/#kontakt"
                 className={`${
                   pathname.includes("/kontakt") ? "border-b-2 border-black" : ""
                 } hover:border-b-2`}

@@ -78,8 +78,8 @@ const Accordions = () => {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger>
-              Funkcje na Wydziale Geodezji i Kartografii
+            <AccordionTrigger className="">
+              Funkcje na Wydziale GiK
             </AccordionTrigger>
             <AccordionContent>Do dodania</AccordionContent>
           </AccordionItem>

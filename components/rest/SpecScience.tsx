@@ -5,13 +5,13 @@ import { MoveRight } from "lucide-react";
 const SpecScience = () => {
   return (
     <section className="bg-[#444036]">
-      <div className="container flex justify-around p-20">
-        <div className="w-1/3">
+      <div className="container flex flex-col md:flex-row justify-around p-4 md:p-20">
+        <div className="md:w-1/3">
           <h1 className="font-libre text-left text-3xl text-[#F9F6EB] leading-relaxed w-1/3">
             Specjalność naukowa
           </h1>
         </div>
-        <div className="mt-20 w-2/3">
+        <div className="mt-20 md:w-2/3">
           <p className="font-libre text-[14px] text-[#F9F6EB]">
             Inżynieria środowiska glebowego, gleboznawstwo, rekultywacja i
             zagospodarowanie obszarów zdegradowanych, rewitalizacja terenów

@@ -55,18 +55,18 @@ const Implementations = () => {
       <div className="">
         <Card className="bg-transparent border-0">
           <CardHeader>
-            <CardTitle className="font-libre text-4xl tracking-wider">
+            <CardTitle className="font-libre text-2xl md:text-4xl md:w-2/3 tracking-wider">
               Wdrożenia
             </CardTitle>
           </CardHeader>
-          <CardContent className="container flex flex-col mt-10 space-y-32">
+          <CardContent className="container flex flex-col md:mt-10 space-y-32">
             {wdrozenia.map((item) => (
               <div
                 key={item.id}
-                className="mt-10 flex flex-col md:flex-row space-x-16"
+                className="mt-4 md:mt-10 flex flex-col md:flex-row md:space-x-16"
               >
                 {/* Left */}
-                <div className="w-[40%]">
+                <div className="md:w-[40%]">
                   <h1 className="font-sans uppercase text-[12px] tracking-wider">
                     {item.author}, {item.years}
                   </h1>
@@ -79,23 +79,23 @@ const Implementations = () => {
                   </p>
                 </div>
                 {/* Right */}
-                <div className="w-[60%]">
+                <div className="md:w-[60%]">
                   <h1 className="font-sans uppercase text-[12px] tracking-wider">
                     UDZIAŁ PROF. DR HAB. ALINY MACIEJEWSKIEJ
                   </h1>
-                  <p className="font-sans mt-2 text-[15px] w-2/3">
+                  <p className="font-sans mt-2 text-[15px] md:w-2/3">
                     {item.engagement}
                   </p>
                   <h1 className="mt-4 font-sans uppercase text-[12px] tracking-wider">
                     MIEJSCE WDROZENIA
                   </h1>
-                  <p className="mt-2 font-sans text-[15px] w-2/3">
+                  <p className="mt-2 font-sans text-[15px] md:w-2/3">
                     {item.place}
                   </p>
                   <h1 className="mt-4 font-sans uppercase text-[12px] tracking-wider">
                     KORZYŚCI
                   </h1>
-                  <p className="mt-2 font-sans text-[15px] w-2/3">
+                  <p className="mt-2 font-sans text-[15px] md:w-2/3">
                     {item.benefits}
                   </p>
                 </div>
@@ -106,26 +106,26 @@ const Implementations = () => {
 
         <Card className="bg-transparent border-0">
           <CardHeader>
-            <CardTitle className="font-libre text-4xl tracking-wider">
+            <CardTitle className="font-libre text-2xl md:text-4xl md:w-2/3 tracking-wider">
               Zgłoszenia patentowe
             </CardTitle>
           </CardHeader>
-          <CardContent className="container flex flex-col mt-10 space-y-32">
+          <CardContent className="container flex flex-col mt-10 md:space-y-32">
             {patenty.map((item) => (
               <div
                 key={item.id}
-                className="mt-10 flex flex-col md:flex-row space-x-16"
+                className="md:mt-10 flex flex-col md:flex-row md:space-x-16"
               >
                 {/* Left */}
-                <div className="w-[40%]">
+                <div className="md:w-[40%]">
                   <h1 className="font-sans uppercase text-[12px] tracking-wider">
                     {item.author}, {item.years}
                   </h1>
                   <p className="font-libre mt-4 text-[16px]">{item.title}</p>
                 </div>
                 {/* Right */}
-                <div className="w-[60%]">
-                  <p className="mt-8 font-sans text-[15px] w-2/3">
+                <div className="md:w-[60%]">
+                  <p className="mt-8 font-sans text-[15px] md:w-2/3">
                     {item.engagement}
                   </p>
                 </div>

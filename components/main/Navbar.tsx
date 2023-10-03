@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -10,9 +12,12 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+import { usePathname } from "next/navigation";
+
 import { Menu } from "lucide-react";
 
 const Navbar = () => {
+  const pathname = usePathname();
   return (
     <nav className="sticky top-0 bg-[#F9F6EB] w-full z-50 font-sans">
       <div className="container max-w-6xl mx-auto flex items-center justify-between h-20 p-4">
@@ -28,29 +33,60 @@ const Navbar = () => {
         </div> */}
         </div>
         <div>
-          <ul className="hidden md:flex space-x-4 items-center uppercase tracking-wider text-[14px] font-light">
+          <ul className="hidden md:flex space-x-4 items-center uppercase tracking-wider text-[16px] font-light">
             <li>
-              <Link href="/" className="hover:border-b-2 border-black">
+              <Link
+                href="/specjalizacje"
+                className={`${
+                  pathname.includes("/specjalizacje")
+                    ? "border-b-2 border-black"
+                    : ""
+                } hover:border-b-2`}
+              >
                 specjalizacje naukowe
               </Link>
             </li>
             <li>
-              <Link href="/projekty" className="hover:border-b-2 border-black">
+              <Link
+                href="/projekty"
+                className={`${
+                  pathname.includes("/projekty")
+                    ? "border-b-2 border-black"
+                    : ""
+                } hover:border-b-2`}
+              >
                 projekty badawcze
               </Link>
             </li>
             <li>
-              <Link href="/wdrozenia" className="hover:border-b-2 border-black">
+              <Link
+                href="/wdrozenia"
+                className={`${
+                  pathname.includes("/wdrozenia")
+                    ? "border-b-2 border-black"
+                    : ""
+                } hover:border-b-2`}
+              >
                 wdrożenia
               </Link>
             </li>
             <li>
-              <Link href="/o-mnie" className="hover:border-b-2 border-black">
+              <Link
+                href="/o-mnie"
+                className={`${
+                  pathname.includes("/o-mnie") ? "border-b-2 border-black" : ""
+                } hover:border-b-2`}
+              >
                 o mnie
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:border-b-2 border-black">
+              <Link
+                href="/kontakt"
+                className={`${
+                  pathname.includes("/kontakt") ? "border-b-2 border-black" : ""
+                } hover:border-b-2`}
+              >
                 kontakt
               </Link>
             </li>
@@ -75,7 +111,10 @@ const Navbar = () => {
                 <div className="">
                   <ul className="mt-10 flex flex-col font-sans gap-y-6 uppercase text-[14px] font-light">
                     <li>
-                      <Link href="/" className="hover:border-b-2 border-black">
+                      <Link
+                        href="/specjalizacje"
+                        className="hover:border-b-2 border-black"
+                      >
                         specjalizacje naukowe
                       </Link>
                     </li>

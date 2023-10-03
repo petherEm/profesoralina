@@ -4,7 +4,7 @@ import { GraduationCap, MoveRight } from "lucide-react";
 
 const Lectures = () => {
   return (
-    <section className="container max-w-6xl mx-auto mt-28 mb-28">
+    <section className="container max-w-6xl mx-auto mt-10 md:mt-28 mb-28">
       <div className="flex flex-col gap-x-4 gap-y-8 md:flex-row justify-around">
         {/* LEFT */}
         <div className="flex-[50%]">

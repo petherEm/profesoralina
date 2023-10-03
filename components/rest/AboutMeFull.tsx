@@ -5,7 +5,7 @@ import { MoveRight } from "lucide-react";
 
 const AboutMeFull = () => {
   return (
-    <section className="container max-w-6xl mx-auto mt-28 mb-28">
+    <section className="container max-w-6xl mx-auto md:mt-28 mb-28">
       <div className="flex flex-col gap-y-6 md:flex-row justify-around">
         {/* LEFT */}
         <div className="flex-[50%] flex flex-col">
@@ -21,7 +21,7 @@ const AboutMeFull = () => {
             alt="Alina Maciejewska"
             width={300}
             height={300}
-            className="object-contain translate-x-20 -translate-y-10"
+            className="object-contain translate-x-10 md:translate-x-20 -translate-y-10"
           />
         </div>
 

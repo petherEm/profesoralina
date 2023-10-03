@@ -111,32 +111,32 @@ const Research = () => {
   return (
     <section className="p-4 md:p-0 container max-w-6xl mx-auto md:mt-28 md:mb-28">
       <div>
-        <Tabs defaultValue="account" className="w-full">
-          <TabsList className="grid w-full bg-transparent grid-cols-4 ">
+        <Tabs defaultValue="men" className="w-full">
+          <TabsList className="grid p-2 w-full bg-transparent grid-cols-1 md:grid-cols-4">
             <TabsTrigger
               value="obszary"
-              className="uppercase font-sans tracking-widest"
+              className="uppercase text-[11px] md:text-[15px] font-sans tracking-widest"
             >
               Obszary realizowanych <br />
               badań
             </TabsTrigger>
             <TabsTrigger
               value="men"
-              className="uppercase font-sans tracking-widest"
+              className="uppercase text-[11px] md:text-[15px] font-sans tracking-widest"
             >
               Projekty finansowane przez <br />
               Ministerstwo nauki
             </TabsTrigger>
             <TabsTrigger
               value="podmioty"
-              className="uppercase font-sans tracking-widest"
+              className="uppercase text-[11px] md:text-[15px] font-sans tracking-widest"
             >
               Projekty finansowane przez <br />
               Podmioty Gospodarcze
             </TabsTrigger>
             <TabsTrigger
               value="samorzady"
-              className="uppercase font-sans tracking-widest"
+              className="uppercase text-[11px] md:text-[15px] font-sans tracking-widest"
             >
               Projekty finansowane przez <br />
               Jednostki Samorządowe
@@ -177,10 +177,91 @@ const Research = () => {
           <TabsContent value="men" className="mt-20">
             <Card className="bg-transparent border-0">
               <CardHeader>
+                <CardTitle className="font-libre text-2xl md:text-4xl md:w-2/3 tracking-wider">
+                  Projekty finansowane przez Ministerstwo Nauki
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="flex flex-col mt-10 space-y-2">
+                {minNauki.map((item) => (
+                  <div
+                    key={item.id}
+                    className="mt-6 md:mt-10 flex flex-col md:flex-row md:space-x-16"
+                  >
+                    {/* Left */}
+                    <div className="md:w-[40%]">
+                      <h1 className="font-sans uppercase text-lg">
+                        {item.type}
+                      </h1>
+                      <p className="font-libre mt-4 text-[16px]">
+                        {item.description}
+                      </p>
+                    </div>
+                    {/* Right */}
+                    <div className="md:w-[60%]">
+                      <p className="font-sans mt-10 text-[15px] md:w-2/3">
+                        {item.details}
+                      </p>
+
+                      <ul className="font-sans mt-2 text-[13px] md:w-2/3 uppercase mb-10">
+                        <li>Zleceniodawca: {item.zleceniodawca}</li>
+                        <li>Projekt celowy: {item.projektCelowy}</li>
+                        <li>UMOWA: {item.umowa}</li>
+                        <li>Okres realizacji: {item.okresRealizacji}</li>
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+          </TabsContent>
+          {/* PODMIOTY GOSPODARCZE */}
+          <TabsContent value="podmioty" className="mt-20">
+            <Card className="bg-transparent border-0">
+              <CardHeader>
                 <CardTitle className="font-libre text-4xl tracking-wider">
                   Projekty finansowane przez
                   <br />
-                  Ministerstwo Nauki
+                  Podmioty Gospodarcze
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="flex flex-col mt-10 space-y-2">
+                {minNauki.map((item) => (
+                  <div key={item.id} className="mt-10 flex space-x-16">
+                    {/* Left */}
+                    <div className="w-[40%]">
+                      <h1 className="font-sans uppercase text-lg">
+                        {item.type}
+                      </h1>
+                      <p className="font-libre mt-4 text-[16px]">
+                        {item.description}
+                      </p>
+                    </div>
+                    {/* Right */}
+                    <div className="w-[60%]">
+                      <p className="font-sans mt-10 text-[15px] w-2/3">
+                        {item.details}
+                      </p>
+
+                      <ul className="font-sans mt-2 text-[13px] w-2/3 uppercase">
+                        <li>Zleceniodawca: {item.zleceniodawca}</li>
+                        <li>Projekt celowy: {item.projektCelowy}</li>
+                        <li>UMOWA: {item.umowa}</li>
+                        <li>Okres realizacji: {item.okresRealizacji}</li>
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+          </TabsContent>
+          {/* SAMORZADY */}
+          <TabsContent value="samorzady" className="mt-20">
+            <Card className="bg-transparent border-0">
+              <CardHeader>
+                <CardTitle className="font-libre text-4xl tracking-wider">
+                  Projekty finansowane przez
+                  <br />
+                  Jednostki Samorządowe
                 </CardTitle>
               </CardHeader>
               <CardContent className="flex flex-col mt-10 space-y-2">

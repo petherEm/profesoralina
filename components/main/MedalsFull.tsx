@@ -86,7 +86,7 @@ const Medals = () => {
           <h1 className="text-xl text-center uppercase font-sans">
             Pozostałe nagrody
           </h1>
-          <div className="font-sans text-[13px] flex flex-col gap-y-4 w-2/3">
+          <div className="font-sans text-[13px] flex flex-col gap-y-4 md:w-2/3">
             <p className="">
               - Nagrody JM Rektora Politechniki Warszawskiej naukowe 1985, 1987,
               1993, 1998, 2003, 2005, 2008, 2010, 2012, 2014, 2015, 2016,
@@ -104,11 +104,11 @@ const Medals = () => {
               2014 r.
             </p>
           </div>
-          <h1 className="text-xl text-center uppercase font-sans w-2/3">
+          <h1 className="text-xl text-center uppercase font-sans md:w-2/3">
             Medale Okolicznościowe przyznane w dowód uznania za wkład w Rozwój
             Uczelni
           </h1>
-          <div className="font-sans text-[13px] flex flex-col gap-y-4 w-2/3">
+          <div className="font-sans text-[13px] flex flex-col gap-y-4 md:w-2/3">
             <p className="">
               - Medal Politechniki Warszawskiej z okazji 100-lecia odnowienia
               tradycji PW 2015 r.

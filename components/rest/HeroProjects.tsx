@@ -10,6 +10,7 @@ const HeroProjects = () => {
         autoPlay
         loop
         muted
+        playsInline
         src="/projects/PR-video.mov"
         className="absolute top-0 left-0 w-full h-full object-cover"
       />

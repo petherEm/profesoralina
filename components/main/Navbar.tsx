@@ -13,17 +13,36 @@ import {
 } from "@/components/ui/sheet";
 
 import { usePathname } from "next/navigation";
-
 import { Menu } from "lucide-react";
 
 const Navbar = () => {
   const pathname = usePathname();
+
+  // Function to determine text color
+  const determineNavbar = (pathname: string) => {
+    if (pathname.includes("/specjalizacje"))
+      return "sticky top-0 w-full z-50 font-sans text-black";
+    if (pathname.includes("/projekty"))
+      return "absolute top-0 w-full z-50 font-sans text-[#F9F6EB] hover:border-[#F9F6EB]";
+    if (pathname.includes("/wdrozenia"))
+      return "absolute top-0 w-full z-50 font-sans text-[#F9F6EB] hover:border-[#F9F6EB]";
+    return "sticky bg-[#F9F6EB] top-0 w-full z-50 font-sans text-black";
+  };
+
+  const textColor = determineNavbar(pathname);
+
   return (
-    <nav className="sticky top-0 bg-[#F9F6EB] w-full z-50 font-sans">
+    <nav className={textColor}>
       <div className="container max-w-6xl mx-auto flex items-center justify-between h-20 p-4">
         <div>
           <Link href="/">
-            <Image src="/amlogo.png" width={100} height={100} alt="logo" />
+            {pathname.includes("/specjalizacje") ||
+            pathname.includes("/projekty") ||
+            pathname.includes("/wdrozenia") ? (
+              <Image src="/WhiteLogo.png" width={100} height={100} alt="logo" />
+            ) : (
+              <Image src="/amlogo.png" width={100} height={100} alt="logo" />
+            )}
           </Link>
 
           {/* <div className="flex flex-col">
@@ -51,7 +70,7 @@ const Navbar = () => {
                 href="/projekty"
                 className={`${
                   pathname.includes("/projekty")
-                    ? "border-b-2 border-black"
+                    ? "border-b-2 border-[#F9F6EB]"
                     : ""
                 } hover:border-b-2`}
               >
@@ -63,7 +82,7 @@ const Navbar = () => {
                 href="/wdrozenia"
                 className={`${
                   pathname.includes("/wdrozenia")
-                    ? "border-b-2 border-black"
+                    ? "border-b-2 border-[#F9F6EB]"
                     : ""
                 } hover:border-b-2`}
               >

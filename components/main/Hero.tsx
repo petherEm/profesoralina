@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
@@ -30,12 +31,17 @@ const Hero = () => {
             </div>
           </div>
           <div className="mt-8 flex items-center space-x-6 font-sans">
-            <Button className="rounded-none uppercase text-[9px] bg-[#444036] hover:bg-transparent hover:border-[1.5px] border-[#444036] hover:text-black py-6">
-              Nawiąż współpracę <MoveRight size={12} className="ml-2" />
-            </Button>
-            <Button className="rounded-none uppercase text-[9px] bg-[#F9F6EB] border-[1.5px] border-[#444036] text-black tracking-wide py-6 hover:text-[#F9F6EB]">
-              Więcej informacji <MoveRight size={12} className="ml-2" />
-            </Button>
+            <Link href="/#kontakt">
+              <Button className="rounded-none uppercase text-[9px] bg-[#444036] hover:bg-transparent hover:border-[1.5px] border-[#444036] hover:text-black py-6">
+                Nawiąż współpracę <MoveRight size={12} className="ml-2" />
+              </Button>
+            </Link>
+
+            <Link href="/#specjalizacje">
+              <Button className="rounded-none uppercase text-[9px] bg-[#F9F6EB] border-[1.5px] border-[#444036] text-black tracking-wide py-6 hover:text-[#F9F6EB]">
+                Więcej informacji <MoveRight size={12} className="ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
 

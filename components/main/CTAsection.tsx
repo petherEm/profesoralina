@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { MoveRight } from "lucide-react";
 
 const CTAsection = () => {
@@ -12,14 +13,19 @@ const CTAsection = () => {
           samorządowe
         </h1>
         <div className="mt-8 flex items-center space-x-6 font-sans">
-          <Button className="rounded-none uppercase text-[9px] bg-[#F9F6EB] border-[1.5px] border-[#444036] text-black tracking-widest py-6 hover:text-[#F9F6EB] hover:bg-[#444036] hover:border-[#F9F6EB]">
-            Nawiąż Współpracę
-            <MoveRight size={12} className="ml-2" />
-          </Button>
-          <Button className="rounded-none uppercase text-[9px] bg-[#444036] hover:bg-transparent border-[1.5px] border-[#F9F6EB] hover:text-black tracking-widest py-6 hover:bg-[#F9F6EB]">
-            Więcej projektów
-            <MoveRight size={12} className="ml-2" />
-          </Button>
+          <Link href="/#kontakt">
+            <Button className="rounded-none uppercase text-[9px] bg-[#F9F6EB] border-[1.5px] border-[#444036] text-black tracking-widest py-6 hover:text-[#F9F6EB] hover:bg-[#444036] hover:border-[#F9F6EB]">
+              Nawiąż Współpracę
+              <MoveRight size={12} className="ml-2" />
+            </Button>
+          </Link>
+
+          <Link href="/projekty">
+            <Button className="rounded-none uppercase text-[9px] bg-[#444036] hover:bg-transparent border-[1.5px] border-[#F9F6EB] hover:text-black tracking-widest py-6 hover:bg-[#F9F6EB]">
+              Więcej projektów
+              <MoveRight size={12} className="ml-2" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
